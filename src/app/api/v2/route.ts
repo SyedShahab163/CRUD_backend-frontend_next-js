@@ -5,9 +5,9 @@ import { GetAllUsersinfo,PostUserInfo } from "@/lib/data"
 // const userData =  [{id: "2", name: 'Moin', age: 9 }]
 
 export const GET = async (req:Request, res:Response)=>{
-      const data = user;
+    //   const data = user;
     try {
-         console.log('___CAlling Get Api-------')
+        //  console.log('___CAlling Get Api-------')
         const userData =  GetAllUsersinfo();
          var date = new Date();
          var current_time = date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds();
@@ -15,9 +15,9 @@ export const GET = async (req:Request, res:Response)=>{
         
         
         return NextResponse.json({
-            result:"Ok",
+            Result:"Ok",
             current_time:current_time,
-             userDetails:userData
+            userData
              
         },
         {

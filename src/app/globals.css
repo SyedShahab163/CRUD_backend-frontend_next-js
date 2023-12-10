@@ -4,14 +4,16 @@
 
 .input-field {
   display: block;
-  margin: 50px;
+  margin: 10px;
   height: 30px;
   width: 300px;
+  
   
 }
 .add-user{
     margin-top:100px;
     text-align: -webket-center;
+    
    
 }
 .btn {
@@ -30,7 +32,11 @@
  display: inline-block;
  width: 100px; ;
 }   
-
+.user-item span{
+display: inline-block;
+width: 100px;
+color:blue;
+}
 
 
 

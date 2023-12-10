@@ -1,11 +1,11 @@
+
 type UserInfo = {
     name:String 
     age:number,
     id:String,
-    // date:Date
 }
  
-const UserInfoDetails: UserInfo[] =  [  ]
+const UserInfoDetails: UserInfo[] =  [ {"age":7,"name":"farhan","id":"7"}, {"age":20,"name":"Arsalan","id":"8"} ]
 export const  GetAllUsersinfo = () => UserInfoDetails;
 
 export const  PostUserInfo = (userinfo:UserInfo) => UserInfoDetails.push(userinfo);
