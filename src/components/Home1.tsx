@@ -9,7 +9,7 @@
 //     // const [name, setName] = useState("");
 //     // const [age, setAge] = useState("");
 //     const addUser = async()=>{
-//         let  respone = await fetch("http://localhost:3000/api/userinfo",{
+//         let  respone = await fetch("http://localhost:3000/api/v1",{
 //             method:"GET",
             
 //         })
@@ -30,10 +30,10 @@
 // }
 
    
-import { user } from '@/utils/db';
+// import { user } from '@/utils/db';
 import Link from 'next/link';
 async function getUsers(){
- let data = await fetch("http://localhost:3000/api/userinfo");
+ let data = await fetch("http://localhost:3000/api/v2");
   data = await data.json(); 
     return data;
 }
@@ -41,6 +41,7 @@ async function getUsers(){
 export default async function Home1(){
      const  data = await getUsers();
     //  console.log(user)
+    const data2 = data['users']
     // const data = [
         // {
             // id:1,name : "shahab"
@@ -68,7 +69,7 @@ var current_time = date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds();
 </thead>
 <tbody>
 {
-    user.map((item,index)=>(
+    data2.map((item,index)=>(
      <tr key={index} >
       <td className='border border-slate-300 ...'>{item.id}</td>
         <td className='border border-slate-300 ...'>{item.name}</td>
